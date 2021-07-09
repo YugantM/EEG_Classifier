@@ -1,0 +1,109 @@
+\documentclass[11pt,a4paper, titlepage=false]{scrreprt}
+
+\usepackage[utf8]{inputenc}
+
+\usepackage[T1]{fontenc}        % Tries to use Postscript Type 1 Fonts for better rendering
+\usepackage{lmodern}            % Provides the Latin Modern Font which offers more glyphs than the default Computer Modern
+
+\usepackage[ngerman, english]{babel}			% german semantics
+\usepackage{amsmath,amsfonts,amssymb} % Provides all mathematical commands
+\usepackage{cite}
+%\usepackage[numbers,sectionbib]{natbib}
+
+%\usepackage{hyperref}           % Provides clickable links in the PDF-document for \ref
+\usepackage{graphicx}
+\usepackage{lipsum}
+
+% Allows to set units
+%\usepackage[ugly]{units}        % Allows you to type units with correct spacing and font style. Usage: $\unit[100]{m}$ or $\unitfrac[100]{m}{s}$
+%\usepackage{siunitx}				% allows better units 
+% Additional packages
+%\usepackage{url}                % Lets you typeset urls. Usage: \url{http://...}
+%\usepackage{breakurl}           % Enables linebreaks for urls
+%\usepackage{xspace}             % Use \xpsace in macros to automatically insert space based on context. Usage: \newcommand{\es}{ESPResSo\xspace}
+%\usepackage{xcolor}             % Obviously colors. Usage: \color{red} Red text
+%\usepackage{booktabs}           % Nice rules for tables. Usage \begin{tabular}\toprule ... \midrule ... \bottomrule
+
+\usepackage{enumitem}
+\usepackage[
+  %showframe,% Seitenlayout anzeigen
+  left=2.5cm,
+  right=2.5cm,
+  top=1.5cm,
+  bottom=2cm,
+  %includeheadfoot
+]{geometry}
+
+% Source code listings
+%\usepackage{listings}           % Source Code Listings. Usage: \begin{lstlisting}...\end{lstlisting}
+
+%\renewcommand*{\thesubsection}{\arabic{subsection}}
+%\renewcommand*{\thesection}{\arabic{section}}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%							Document
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+\selectlanguage{english}
+\title{Topic}
+\author{}
+\date{}
+\maketitle
+\vspace{-2cm}
+\begin{tabular}{r l}
+Type of work: & \\% Bachelor/Master Thesis,  Research Project, Group Studies, etc.
+Student: & B.  Sc. \\
+% & B. Sc.  \\ % add more for group work
+Supervisor: & \\
+Chair: & Prof. Dr.-Ing. Patrick Mäder (JP)\\
+Department: & Software Engineering for Safety-Critical Systems\\
+Duration: & (start)-(end)\\
+\end{tabular}
+
+\vspace{3mm}
+
+\begin{tabular}{l p{0.75\textwidth}}
+\\
+\textbf{Keywords:} & ...; ...; ... \\ % add three keywords
+\end{tabular}
+
+\vspace{8mm}
+
+\section*{Motivation}
+\lipsum[2]
+
+\section*{Task Description}
+\lipsum[2-4]
+
+\section*{Approach}
+\begin{itemize}
+	\item Methods
+	\item Metrics
+	\item Design of Experiment
+\end{itemize}
+\lipsum[5-8]
+
+
+\section*{Time Schedule}
+
+\begin{tabular}{c p{0.8\textwidth}}
+\textbf{Week}	& \textbf{Tasks} \\
+\hline
+1-3		& Literature survey \\
+...			& ...\\
+20-24	& Preparation of the results and writing of the thesis\\
+\end{tabular}
+
+\vspace{5mm}
+\section*{References}
+{\small
+\begingroup
+\let\chapter\section
+\bibliographystyle{ieeetr}
+\bibliography{literature}
+
+\endgroup
+}
+\end{document}
